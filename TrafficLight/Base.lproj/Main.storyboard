@@ -16,19 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xA7-SE-OFw">
-                                <rect key="frame" x="116" y="583.5" width="143" height="45.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="xA7-SE-OFw" secondAttribute="height" multiplier="145:46" id="9eb-eN-FEq"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <buttonConfiguration key="configuration" style="filled" title="START">
-                                    <fontDescription key="titleFontDescription" name="Menlo-Regular" family="Menlo" pointSize="27"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="startButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="ygA-EH-uw9"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="C6R-2A-thG">
                                 <rect key="frame" x="132.5" y="60" width="110" height="414"/>
                                 <subviews>
@@ -50,20 +37,38 @@
                                     <constraint firstAttribute="width" constant="110" id="HKf-7c-8ac"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAw-er-k9t">
+                                <rect key="frame" x="149.5" y="592.5" width="76" height="34.5"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mAw-er-k9t" secondAttribute="height" multiplier="75:34" id="2Q3-yU-o3l"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="filled" title="START">
+                                    <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="IZV-ys-aaA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mAw-er-k9t" secondAttribute="bottom" constant="40" id="3xk-HW-v6g"/>
                             <constraint firstItem="C6R-2A-thG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="JxC-g8-rnY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xA7-SE-OFw" secondAttribute="bottom" constant="38" id="eym-gW-4s3"/>
-                            <constraint firstItem="xA7-SE-OFw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hBO-Zl-o60"/>
+                            <constraint firstItem="mAw-er-k9t" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Z4w-5i-GOV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mAw-er-k9t" secondAttribute="bottom" constant="40" id="cge-mt-tb4"/>
                             <constraint firstItem="C6R-2A-thG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oat-04-MzV"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="greenLight" destination="Cia-Jh-NUW" id="R9x-JV-SiP"/>
                         <outlet property="redLight" destination="6qo-xS-kyW" id="Pgq-Ev-wsK"/>
-                        <outlet property="startButton" destination="xA7-SE-OFw" id="ION-gp-gaV"/>
+                        <outlet property="startButton" destination="mAw-er-k9t" id="wgc-nW-YqZ"/>
                         <outlet property="yellowLight" destination="S6z-Ks-Rf2" id="YWh-dz-uAK"/>
                     </connections>
                 </viewController>
@@ -75,6 +80,12 @@
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

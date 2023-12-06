@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        startButton.layer.cornerRadius = 100
+        startButton.layer.cornerRadius = 10.0
         
         redLight.alpha = lightIsOff
         yellowLight.alpha = lightIsOff
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         greenLight.layer.cornerRadius = greenLight.frame.width / 2
     }
     
-    @IBAction func startButtonDidTapped(){
+    @IBAction func startButtonDidTapped() {
         startButton.setTitle("NEXT", for: .normal)
         
         switch trafficLight {
